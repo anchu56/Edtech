@@ -1,0 +1,40 @@
+<!-- <table class="table table-hover" style="border: 2px solid black; align-items: center;" >
+    <thead >
+      <tr >
+        <th>ID</th>
+        <th>CourseName</th>
+        <th>Trainer</th>
+        <th>Duration</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of courses">
+        <td >{{ c.cid }}</td>
+        <td>{{ c.cname }}</td>
+        <td>{{ c.ctrainer }}</td>
+        <td>{{ c.cduration }}</td>
+      </tr>
+    </tbody>
+  </table>  -->
+  <div class="ag-format-container">
+    <div class="ag-courses_box">
+      <div class="ag-courses_item" *ngFor="let c of courses">
+        <a href="#" class="ag-courses-item_link">
+          <div class="ag-courses-item_bg"></div>
+            <h6>Trainer : {{c.ctrainer}}</h6>
+          <div class="ag-courses-item_title">
+            {{ c.cname }}
+          </div>
+  
+          <div class="ag-courses-item_date-box">
+           Duration:
+            <span class="ag-courses-item_date">
+              {{ c.cduration }}
+            </span>
+          </div>
+        </a>
+      </div>
+  
+    </div>
+  </div>
+  <router-outlet></router-outlet>

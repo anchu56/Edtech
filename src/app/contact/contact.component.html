@@ -1,0 +1,115 @@
+<div class="full">
+  <h1 style="text-align: center; font-family: Plus Jakarta Sans, sans-serif; font-weight: bold;">Register Now!!</h1>
+  <div class="container">
+    <div class="card">
+      <form class="card-form" #userForm="ngForm">
+        <div class="input">
+               
+                <input type="text" class="input-field" id="" name="fname"  required  [(ngModel)]="user.firstName">
+                <label class="input-label">First name</label>
+        </div>
+  
+        <div class="input">
+               
+                <input type="text" class="input-field" name="lname" required [(ngModel)]="user.lastName">    
+                <label class="input-label">Last name</label>  
+        </div>
+  
+        <div class="input">
+               
+                  <input type="text" class="input-field" name="uname" aria-describedby="inputGroupPrepend" required [(ngModel)]="user.userName"> 
+                  <label class="input-label">Username</label>
+        </div>
+
+        <div class="input">
+          <input type="password" class="input-field" name="password" required [(ngModel)]="user.password" >
+        <label class="input-label">Password</label>
+
+</div>
+  
+        <div class="input">
+          
+                  <select name="gender" [(ngModel)]="user.gender" class="input-field">
+                          <option *ngFor="let g of Genderarr" >{{g}}</option>
+                  </select>
+                  <label class="input-label">Gender</label>
+          </div>
+  
+          <div class="input">
+           
+              <input type="text" class="input-field"  name="state" required [(ngModel)]="user.state">
+              <label class="input-label">State</label>
+          </div>
+  
+          <div class="input">
+            <input type="text" class="input-field"  name="city" required [(ngModel)]="user.city">     
+            <label class="input-label">City</label>
+          </div>
+  
+          <div class="input">
+            
+            <input type="text" class="input-field" name="zip" required [(ngModel)]="user.pincode">
+            <label class="input-label">Zip</label>
+          </div>
+  
+        <div class="action">
+          <button class="action-button" (click)="openModal(userForm)">Register</button>
+        </div>
+      </form>
+      <div class="card-info">
+        <p>By signing up you are agreeing to our <a href="#">Terms and Conditions</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h4 class="modal-title">Registration Sucessfull </h4>
+        <img src="/assets/icons8-success.gif" alt="">
+      </div>
+
+      <div class="modal-body">
+        <p> Name : {{user.firstName}} {{user.lastName}}</p>
+        <p> Username : {{user.userName}}</p>
+        <p> Gender : {{user.gender}}</p>
+        <p> City : {{user.city}}</p>
+        <p> State : {{user.state}}</p>
+        <p> Pincode : {{user.pincode}}</p>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="closeModal()">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="myModal2">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h4 class="modal-title">Alert!!</h4>
+       </div>
+
+      <div class="modal-body">
+        <p> Please Enter All Details</p>
+        <img src="assets/icons8-cancel.gif" style="width: 5rem; height: 5rem" alt="">
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="closeModal2()">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+

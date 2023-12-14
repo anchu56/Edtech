@@ -1,0 +1,43 @@
+
+.main{
+    width: 100%;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(354deg, rgba(209,227,250,1) 2%, rgba(255,255,255,0.7903536414565826) 48%);
+    height:100vh
+    
+}
+.AboutH1{
+    font-weight: bold;
+    margin-left: 4rem;
+    margin-top: 5rem;
+}
+.Aboutp{
+    width: 29rem;
+    margin-left: 4rem;
+    margin-top: 2rem;
+    
+}
+
+.carousel{
+    width: 100%;
+}
+
+.carousel-control-prev-icon{
+    background-color: black;
+}
+.carousel-control-next-icon{
+    background-color: black;
+}
+.carousel-item.active{
+    display: flex;
+}
+.photo{
+    width: 50%;
+    padding-left: 5rem;
+    padding-top: 2rem;
+}
+.data{
+    width: 50%;
+}
